@@ -36,3 +36,14 @@ workflows:
             - Devop1
             - Devop2
             - Devop3
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node
+        auth:22y0FHyXfshKuQacDSbm1W7xWw6_46zkQt4uQ5cEReD2DDh5L
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout 
+      - run:
